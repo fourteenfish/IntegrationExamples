@@ -28,10 +28,13 @@ As well as the parameters above, you can optionally pass some of the user's pers
 + `lastname`
 + `county` (eg. Wiltshire)
 + `profession` (eg. Nurse)
++ `userid`
+
+Passing us the **userid** from your database is a good idea as it allows us to record this in our database. If you then decide to move to one of our more complex APIs in future then this will be useful and will save people from linking their accounts again.
 
 ## article-callback.html
 
-If putting the user's personal details in the **iframe** src attribute feels messy but you still want to assist the user with account creation, you can just send us your `userid` and we will then use this to perform a serverside callback to get their details.
+If putting the user's personal details in the **iframe** src attribute feels messy but you still want to assist the user with account creation, you can just send us your `userid` and `usercallback` set to **true** and we will then use this to perform a serverside callback to get their details. 
 
 With the **demo** `integrationid` we just use a dummy callback. You can see the JSON data that we use to mock the response from the callback in the **userdatacallback.json** file. If you want to use this method then we will ask you for your callback URL when we set up your `integrationid`. We'll also give you a secret `key` that you can use to validate requests.
 
