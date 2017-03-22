@@ -6,4 +6,6 @@ div.wrapper { padding: 20px; position: relative; }
 div.main { margin-right: 300px; }
 div.sidebar { margin-top: 0; padding-top: 0; border-top: none; position: absolute; width: 200px; top: 20px; right: 20px; border-left: 1px dotted #777; padding-left: 20px; }
 
-div.popover { padding: 20px; position: fixed; top: 50px; left: 50%; width: 500px; margin-left: -270px; }
+div.popover { padding: 20px 50px; position: fixed; top: 50px; left: 50%; width: 400px; margin-left: -250px; }
+
+div.popover iframe { width: 100%; margin: 0; }

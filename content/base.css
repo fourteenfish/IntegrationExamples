@@ -2,22 +2,21 @@
 
 body { font-family: 'Source Sans Pro'; margin: 0; height: 100%; }
 
-h1 { color: #C92989; font-size: 1.8em; margin-top: 0; font-weight: 600; }
+h1 { font-size: 1.8em; margin-top: 0; font-weight: 600; }
 a { color: #C92989; text-decoration: none; }
 .clear { clear: both; }
 li { margin-bottom: 10px; }
 
-div.explanation { background: #F3F3F3; padding: 10px; border-bottom: 1px solid #C92989; }
+div.explanation { background: #F3F3F3; padding: 10px; border-bottom: 1px solid #CCC; }
 
 div.wrapper { padding: 10px; }
 div.wrapper h1 { color: #19689C; }
 
-div.sidebar { border-top: 1px dotted #777; margin-top: 30px; }
-div.sidebar p.date { color: #888; font-size: 0.9em; }
-
+div.sidebar { border-top: 1px dotted #777; margin-top: 30px; text-align: center; }
 a.recordcpd { display: inline-block; padding: 6px 24px; background-color: #19689C; color: #FFF; font-weight: 600; font-size: 1.2em; border-radius: 4px; }
+a.listcpd { color: #777; font-size: 0.9em; }
 
 div.pagecover { background-color: rgba(0,0, 0, 0.2); position: fixed; top: 0; left: 0; width: 100%; height: 100%; }
-div.popover { background-color: #FFF; padding: 10px; position: fixed; top: 0; left: 0; width: 100%; min-height: 200px; }
+div.popover { background-color: #FFF; position: fixed; top: 0; left: 0; width: 100%; min-height: 200px; }
 
-div.popover iframe { border: none; width: 100%; }
+div.popover iframe { border: none; width: 90%; margin: 0 auto; display: block; }

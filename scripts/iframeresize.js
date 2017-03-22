@@ -10,6 +10,6 @@
 $(document).ready(function() {
     $(window).on("message", function(e) {
         var height = e.originalEvent.data.iframeHeight;
-        $('div.popover iframe').height(height);
+        if ($('iframe').height() < height) $('iframe').height(height);
     });
 });
