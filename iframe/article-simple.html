@@ -32,8 +32,9 @@
 <body>
 
 <div class="explanation">
-    <h1>iFrame demo: recording CPD</h1>
+    <h1>Recording CPD (simple)</h1>
     <p>In this example all the parameters needed for the widget are present in the <strong>href</strong> attribute of the link. This attribute is used as the <strong>src</strong> of the iframe element that contains the widget.</p>
+    <p>Note that you can still use the widget without any of the user's personal details being included in the link. If you leave these out then the only difference is that the user's details won't be prefilled if they need to create a FourteenFish account. Alternatively you can just pass us a <strong>userid</strong> and we will make a <a href="article-callback.html">callback</a> to get their details.</p>
     <p>If the user is logged in to FourteenFish then they are taken straight to the CPD recording page when the iframe loads. Otherwise they are shown the login page.</p>
 </div>
 
@@ -49,7 +50,7 @@
 
     <div class="sidebar">        
         <p class="date">Published on 1 January 2017</p> 
-        <p><a class="recordcpd" href="https://www.fourteenfish.com/widget/iframe?integrationId=demo&amp;pagetitle=Can+low+carbs+diet+reduce+the+risk+for+diabetes%3F&amp;pageurl=https://www.univadis.co.uk/viewarticle/can-low-carbs-diet-reduce-the-risk-for-diabetes-499141&amp;email=sheldoncooper@example.com&amp;firstname=Sheldon&amp;lastname=Cooper&amp;salutation=Dr&amp;profession=GP">Record CPD</a></p> 
+        <p><a class="recordcpd" href="https://www.fourteenfish.com/widget/recordcpd?integrationId=demo&amp;pagetitle=Can+low+carbs+diet+reduce+the+risk+for+diabetes%3F&amp;pageurl=https://www.univadis.co.uk/viewarticle/can-low-carbs-diet-reduce-the-risk-for-diabetes-499141&amp;email=cooper@example.com&amp;firstname=Sheldon&amp;lastname=Cooper&amp;salutation=Dr&amp;profession=GP&amp;county=Wiltshire">Record CPD</a></p> 
     </div>
 
     <div class="clear"></div>

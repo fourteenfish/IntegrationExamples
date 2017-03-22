@@ -5,6 +5,7 @@ body { font-family: 'Source Sans Pro'; margin: 0; height: 100%; }
 h1 { color: #C92989; font-size: 1.8em; margin-top: 0; font-weight: 600; }
 a { color: #C92989; text-decoration: none; }
 .clear { clear: both; }
+li { margin-bottom: 10px; }
 
 div.explanation { background: #F3F3F3; padding: 10px; border-bottom: 1px solid #C92989; }
 

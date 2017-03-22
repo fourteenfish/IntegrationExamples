@@ -1,0 +1,59 @@
+<html>
+<head>
+    <title>iFrame integration demo</title>
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600" rel="stylesheet" type="text/css" />
+    <link href="content/base.css" rel="stylesheet" type="text/css" />
+    <link href="content/large.css" rel="stylesheet" type="text/css" media="only screen and (min-width: 800px)" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="scripts/iframeresize.js"></script>
+
+    <script>
+        $(document).ready(function() {
+            $('a.recordcpd').on('click', function(event) {
+                // Prevent the normal behaviour of the link
+                event.preventDefault();
+                
+                // Create the popover elements 
+                $('body').append('<div class="pagecover"></div>');
+                $('body').append('<div class="popover"><iframe frameborder="0"></iframe></div>');
+
+                // Remove the popover elements if the user clicks outside the popover    
+                $('div.pagecover').on('click', function() {
+                    $('div.pagecover, div.popover').remove();
+                });
+
+                // Set the iframe src from the link
+                $('div.popover iframe').attr('src', $(this).attr('href'));               
+            });
+        });
+    </script>
+</head>
+
+<body>
+
+<div class="explanation">
+    <h1>Recording CPD (server callback)</h1>
+    <p>In this example only the page title and URL are in the <strong>href</strong> attribute of the link without any of the user's personal details. Your local <strong>userId</strong> is also passed, and we use this to make a callback to your server along with a shared secret key that you can use to validate the request.</p>
+    <p>With the <strong>demo</strong> integration ID we just use a dummy callback. You can see the JSON data that we use to mock the response from the callback in the <a href="userdatacallback.json">userdatacallback.json</a> file. If you want to use this method then we will ask you for your callback URL when we set up your integration ID.</p>
+</div>
+
+<div class="wrapper">
+    <div class="main">
+        <h1>Can low carbs diet reduce the risk for diabetes?</h1>
+        <ul>
+            <li>This meta-analysis shows that low to moderate carbohydrate diets have greater glucose-lowering effect compared with high-carbohydrate diets (HCD).</li>
+            <li>Apart from this lowering of HbA1c over the short term, there is no superiority of low-carbohydrate diets (LCD) in terms of glycaemic control, weight, or Low-density lipoprotein (LDL) cholesterol.</li>  
+            <li>The ideal amount of carbohydrates in the diet in the management of type 2 diabetes is unclear.</li>  
+        </ul>
+    </div>
+
+    <div class="sidebar">        
+        <p class="date">Published on 1 January 2017</p> 
+        <p><a class="recordcpd" href="https://www.fourteenfish.com/widget/recordcpd?integrationId=demo&amp;pagetitle=Can+low+carbs+diet+reduce+the+risk+for+diabetes%3F&amp;pageurl=https://www.univadis.co.uk/viewarticle/can-low-carbs-diet-reduce-the-risk-for-diabetes-499141&amp;userid=abcdef">Record CPD</a></p> 
+    </div>
+
+    <div class="clear"></div>
+</div>
+</body>
+
+</html>
