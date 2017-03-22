@@ -15,10 +15,10 @@
                 
                 // Create the popover elements 
                 $('body').append('<div class="pagecover"></div>');
-                $('body').append('<div class="popover"><iframe frameborder="0"></iframe></div>');
+                $('body').append('<div class="popover"><i class="closeicon" /><iframe frameborder="0"></iframe></div>');
 
-                // Remove the popover elements if the user clicks outside the popover    
-                $('div.pagecover').on('click', function() {
+                // Remove the popover elements if the user clicks outside the popover or on the close icon
+                $('div.pagecover, i.closeicon').on('click', function() {
                     $('div.pagecover, div.popover').remove();
                 });
 
