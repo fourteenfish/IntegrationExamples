@@ -4,7 +4,7 @@ This repository is intended to give you a great starting point for integrating w
 
 To use the Learning Diary (the name for our CPD recorder) via the widget, the user needs a FourteenFish account. We try and make it nice and easy for them to create their account if they don't already have them.
 
-![What the test page looks like](http://i.imgur.com/BYqqNXy.png)
+![What the test page looks like](http://i.imgur.com/G1Q78cb.png)
 
 ## article-simple.html
 
