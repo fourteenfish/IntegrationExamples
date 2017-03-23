@@ -1,6 +1,8 @@
-# FourteenFish integration
+# About this repository
 
 This repository is intended to give you a great starting point for integrating with our **iframe widget**.
+
+Want to jump straight to the action? **[Go to the demo](article-simple.html)**
 
 To use the Learning Diary (the name for our CPD recorder) via the widget, the user needs a FourteenFish account. We try and make it nice and easy for them to create their account if they don't already have one.
 
