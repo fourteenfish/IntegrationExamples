@@ -1,14 +1,16 @@
 # About this repository
 
-This repository is intended to give you a great starting point for integrating with our **iframe widget**.
+This repository is intended to give you a great starting point for integrating with our iframe widget.
 
-Want to jump straight to the action? **[Go to the demo](article-simple.html)**
+**Want to jump straight to the action? [Go to the demo >](article-simple.html)**
 
 To use the Learning Diary (the name for our CPD recorder) via the widget, the user needs a FourteenFish account. We try and make it nice and easy for them to create their account if they don't already have one.
 
 ![What the test page looks like](http://i.imgur.com/G1Q78cb.png)
 
 ## article-simple.html
+
+[Go to the demo page >](article-simple.html)
 
 This is the easiest option for you to implement. You put a button in any pages of your website that you want the user to be able to record CPD from. When the user clicks this button, you show an **iframe** with some special parameters:
 
@@ -35,6 +37,8 @@ As well as the parameters above, you can optionally pass some of the user's pers
 Passing us the **userid** from your database is a good idea as it allows us to record this in our database. If you then decide to move to one of our more complex APIs in future then this will be useful and will save people from linking their accounts again.
 
 ## article-callback.html
+
+[Go to the demo page >](article-callback.html)
 
 If putting the user's personal details in the **iframe** src attribute feels messy but you still want to assist the user with account creation, you can just send us your `userid` and `usercallback` set to **true** and we will then use this to perform a serverside callback to get their details. 
 
