@@ -15,6 +15,7 @@ To use the Learning Diary (the name for our CPD recorder) via the widget, the us
 This is the easiest option for you to implement. You put a button in any pages of your website that you want the user to be able to record CPD from. When the user clicks this button, you show an **iframe** with some special parameters:
 
 + `integrationid`
++ `intent` (**newentry** or **list**)
 + `pagetitle`
 + `pageurl`
 
@@ -45,3 +46,9 @@ If putting the user's personal details in the **iframe** src attribute feels mes
 With the **demo** `integrationid` we just use a dummy callback. You can see the JSON data that we use to mock the response from the callback in the **userdatacallback.json** file. If you want to use this method then we will ask you for your callback URL when we set up your `integrationid`. We'll also give you a secret `key` that you can use to validate requests.
 
 Just to clarify, there is nothing wrong with putting the user's personal details in the **src** of the iframe. This method just feels a little neater 🤓.  
+
+## list-simple.html
+
+This demo contains a single iframe for displaying a list of the user's CPD entries. The code in the **scripts/message.js** file ensures that the iframe is always tall enough to accomodate its content and avoids the iframe having scrollbars.
+
+You could argue that it's strange to show a link to this page to the user before they have recorded any CPD. If you'd like to hide the page initially, let us know and we can send a callback to your server when the user records their first CPD entry along with their **userId** to enable you to show or hide the link to this page.

@@ -21,4 +21,5 @@ div.pagecover { background-color: rgba(0,0, 0, 0.2); position: fixed; top: 0; le
 div.popover { background-color: #FFF; position: fixed; top: 0; left: 0; width: 100%; min-height: 200px; }
 i.closeicon { display: block; height: 12px; width: 12px; background: url(close.svg) no-repeat; position: absolute; top: 10px; right: 10px; cursor: pointer; }
 
-div.popover iframe { border: none; width: 90%; margin: 0 auto; display: block; }
+div.wrapper iframe { border: none; width: 800px; display: block; }
+div.wrapper div.popover iframe { width: 90%; margin: 0 auto; }
