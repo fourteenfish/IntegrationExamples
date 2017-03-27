@@ -1,0 +1,54 @@
+<html>
+<head>
+    <title>iFrame integration demo</title>
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600" rel="stylesheet" type="text/css" />
+    <link href="content/base.css" rel="stylesheet" type="text/css" />
+    <link href="content/large.css" rel="stylesheet" type="text/css" media="only screen and (min-width: 800px)" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="scripts/message.js"></script>
+
+    <script>
+        $(document).ready(function() {
+            $('a.recordcpd').on('click', function(event) {
+                // Prevent the normal behaviour of the link
+                event.preventDefault();
+                
+                // Create the popover elements 
+                $('body').append('<div class="pagecover"></div>');
+                $('body').append('<div class="popover"><i class="closeicon" /><iframe frameborder="0" class="fixedheight"></iframe></div>');
+
+                // Remove the popover elements if the user clicks outside the popover or on the close icon
+                $('div.pagecover, i.closeicon').on('click', function() {
+                    $('div.pagecover, div.popover').remove();
+                });
+
+                // Set the iframe src from the link
+                $('div.popover iframe').attr('src', $(this).attr('href'));               
+            });
+        });
+    </script>
+</head>
+
+<body>
+
+<div class="explanation">
+    <h1>List CPD entries with record button</h1>
+    <p>This page contains two iframes, one for listing existing entries and one for recording new entries which is triggered by the link on the right hand side of the page.</p>
+    <p>When the message **refreshlist** is received then the list of entries is reloaded to display the new entry. This message is sent earlier than the **saved** message to allow the iframe to be reloaded in advance of the popover closing.</p>
+</div>
+
+
+<div class="wrapper">
+    <div class="main">
+        <h1>Your CPD entries</h1>
+        <iframe frameborder="0" class="cpdlist" src="https://www.fourteenfish.com/widget?integrationid=demo&amp;intent=list&amp;email=cooper@example.com&amp;firstname=Sheldon&amp;lastname=Cooper"></iframe>
+    </div>
+    <div class="sidebar">        
+        <p><a class="recordcpd" href="https://www.fourteenfish.com/widget?integrationId=demo&amp;intent=newentry&amp;email=cooper@example.com&amp;firstname=Sheldon&amp;lastname=Cooper&amp;salutation=Dr&amp;profession=GP&amp;county=Wiltshire&amp;userid=123456">Record CPD</a></p> 
+    </div>
+
+    <div class="clear"></div>
+</div>
+</body>
+
+</html>

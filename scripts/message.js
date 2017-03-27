@@ -13,10 +13,13 @@ $(document).ready(function() {
         var data = e.originalEvent.data;
         if (data.event == "height") {
             var height = data.iframeHeight;
-            if ($('iframe').height() < height) $('iframe').height(height);
+            if ($('iframe').height() < height) $('iframe:eq(0)').height(height);
         }
         else if (data.event == "saved") {
             $('div.pagecover, div.popover').remove();
+        }
+        else if (data.event == "refreshlist") {
+            $('iframe.cpdlist').attr("src", $('iframe.cpdlist').attr("src"));
         }
     });
 });

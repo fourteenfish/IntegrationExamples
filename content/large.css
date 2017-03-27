@@ -9,3 +9,4 @@ div.sidebar { margin-top: 0; padding-top: 0; border-top: none; position: absolut
 div.popover { padding: 20px 50px; position: fixed; top: 50px; left: 50%; width: 400px; margin-left: -250px; }
 
 div.popover iframe { width: 100%; margin: 0; }
+div.wrapper iframe.cpdlist { border: none; width: 600px; display: block; }
