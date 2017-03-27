@@ -52,3 +52,9 @@ Just to clarify, there is nothing wrong with putting the user's personal details
 This demo contains a single iframe for displaying a list of the user's CPD entries. The code in the **scripts/message.js** file ensures that the iframe is always tall enough to accomodate its content and avoids the iframe having scrollbars.
 
 You could argue that it's strange to show a link to this page to the user before they have recorded any CPD. If you'd like to hide the page initially, let us know and we can send a callback to your server when the user records their first CPD entry along with their **userId** to enable you to show or hide the link to this page.
+
+## list-record.html
+
+This demo contains two iframes, one for listing existing entries and one for recording new entries which is triggered by the link on the right hand side of the page.
+
+When the message **refreshlist** is received then the list of entries is reloaded to display the new entry. This message is sent earlier than the **saved** message to allow the iframe to be reloaded in advance of the popover closing.
