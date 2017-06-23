@@ -25,3 +25,9 @@ iframe { display: block; border: none; }
 div.popover iframe { width: 90%; margin: 0 auto; }
 div.popover iframe.fixedheight { height: 500px; }
 div.wrapper iframe.cpdlist { width: 100%;  }
+
+h2.spaceabove { margin-top: 60px; }
+
+table { border-collapse: collapse; }
+td, th { padding: 5px; border-bottom: 1px solid #DDD; text-align: left }
+th { border-top: 1px solid #DDD; background-color: #EEE; padding: 10px 5px; }

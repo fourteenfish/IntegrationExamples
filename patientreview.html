@@ -1,0 +1,145 @@
+<html>
+<head>
+    <title>iFrame integration demo</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600" rel="stylesheet" type="text/css" />
+    <link href="content/base.css" rel="stylesheet" type="text/css" />
+    <link href="content/large.css" rel="stylesheet" type="text/css" media="only screen and (min-width: 800px)" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="scripts/message.js"></script>
+
+    <script>
+        $(document).ready(function() {
+            $('a.recordcpd').on('click', function(event) {
+                // Prevent the normal behaviour of the link
+                event.preventDefault();
+                
+                // Create the popover elements 
+                $('body').append('<div class="pagecover"></div>');
+                $('body').append('<div class="popover"><i class="closeicon" /><iframe frameborder="0"></iframe></div>');
+
+                // Remove the popover elements if the user clicks outside the popover or on the close icon
+                $('div.pagecover, i.closeicon').on('click', function() {
+                    $('div.pagecover, div.popover').remove();
+                });
+
+                // Set the iframe src from the link
+                $('div.popover iframe').attr('src', $(this).attr('href'));               
+            });
+        });
+    </script>
+</head>
+
+<body>
+
+<div class="explanation">
+    <h1>Recording a patient review</h1>
+    <p>This is a demo for submitting a patient review with a star rating and comments for the user to reflect on. If you want to do this, please <a href="https://www.fourteenfish.com/contact">contact us</a> and we will perform the nessasary setup at our end.</p>
+    <p>All the parameters needed for the widget are present in the <strong>href</strong> attribute of the link. This attribute is used as the <strong>src</strong> of the iframe element that contains the widget.</p>
+    <p>Star ratings are expressed as integers like this: 1 star = 20, 1.5 stars = 30, 2 stars = 40 ... 5 stars = 100.</p>
+    <p>Note that we do not include the patient's name anywhere since this must not appear in the clinician's appraisal.</p>
+</div>
+
+<div class="wrapper">
+    <div class="main">
+        <h1>Patient review from Bob Smith</h1>
+        <p>Review left on 1st June 2017</p>
+        <ul>
+            <li>Would you recommend this doctor? ★★★★☆</li>
+            <li>Do you trust this doctor? ★★★☆☆</li>
+            <li>Did this doctor listen to you? ★★★★★</li>
+        </ul>
+        <p><em>The doctor listened to me as I explained what seemed to be wrong with me, acted upon it and agreed with me what should be done</em></p>
+
+        <h2 class="spaceabove">URL parameters</h2>
+        <table>
+            <tr>
+                <th>Parameter</th>
+                <th>Description</th>
+                <th>Examples</th>
+            </tr>
+            <tr>
+                <td>integrationid</td>
+                <td>The ID for your integration</td>
+                <td>iwgc</td>
+            </tr>
+            <tr>
+                <td>pageurl</td>
+                <td>URL of review</td>
+                <td>https://www.iwantgreatcare.org/lansoprazole/reviews/193e05e7</td>
+            </tr>
+            <tr>
+                <td>num1</td>
+                <td>Would you recommend this doctor?</td>
+                <td>80</td>
+            </tr>
+            <tr>
+                <td>num2</td>
+                <td>Do you trust this doctor?</td>
+                <td>60</td>
+            </tr>
+            <tr>
+                <td>num3</td>
+                <td>Did this doctor listen to you?</td>
+                <td>100</td>
+            </tr>
+            <tr>
+                <td>date</td>
+                <td>Date the review was left</td>
+                <td>2017-06-01<br />01/06/2017 (encoded as 01%2f06%2f2017)</td>
+            </tr>
+            <tr>
+                <td>comments</td>
+                <td>Patient comments</td>
+                <td>The doctor listened to me as I explained...</td>
+            </tr>
+            <tr>
+                <td>email</td>
+                <td>User email *</td>
+                <td>cooper@example.com</td>
+            </tr>
+            <tr>
+                <td>firstname</td>
+                <td>User first name *</td>
+                <td>Sheldon</td>
+            </tr>
+            <tr>
+                <td>lastname</td>
+                <td>User last name *</td>
+                <td>Cooper</td>
+            </tr>
+            <tr>
+                <td>salutation</td>
+                <td>User salutation *</td>
+                <td>Dr</td>
+            </tr>
+            <tr>
+                <td>profession</td>
+                <td>User profession *</td>
+                <td>GP<br />Nurse</td>
+            </tr>
+            <tr>
+                <td>county</td>
+                <td>User county *</td>
+                <td>Hampshire</td>
+            </tr>
+            <tr>
+                <td>userid</td>
+                <td>User ID on your system **</td>
+                <td>123456</td>
+            </tr>
+        </table>
+
+        <p>* Optional parameter used to prefill the account creation form and save the user from re-entering this information. When we talk about the user we mean the clinician, not the patient.</p>
+        <p>** Another optional parameter &ndash; see <a href="https://philwilks.github.io/FourteenFish-Integration/">the integration overview</a> for details.</p>
+    </div>
+
+    <div class="sidebar">        
+        <p><a class="recordcpd" href="https://www.fourteenfish.com/integration/widget?integrationid=iwgc&amp;pageurl=https://www.example.com/review/8546758496456&amp;num1=80&amp;num2=60&amp;num3=100&amp;date=2017-01-06&amp;comments=The%20doctor%20listened%20to%20me%20as%20I%20explained%20what%20seemed%20to%20be%20wrong%20with%20me,%20acted%20upon%20it%20and%20agreed%20with%20me%20what%20should%20be%20done&amp;email=cooper@example.com&amp;firstname=Sheldon&amp;lastname=Cooper&amp;salutation=Dr&amp;profession=GP&amp;county=Wiltshire&amp;userid=123456">Add to appraisal</a></p> 
+    </div>
+
+    <div class="clear"></div>
+</div>
+</body>
+
+</html>
