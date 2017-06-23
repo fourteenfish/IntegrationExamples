@@ -62,3 +62,7 @@ You could argue that it's strange to show a link to this page to the user before
 This demo contains two iframes, one for listing existing entries and one for recording new entries which is triggered by the link on the right hand side of the page.
 
 When the message **refreshlist** is received then the list of entries is reloaded to display the new entry. This message is sent earlier than the **saved** message to allow the iframe to be reloaded in advance of the popover closing.
+
+## Other pages
+
+[Patient review >](https://philwilks.github.io/FourteenFish-Integration/patientreview.html)
