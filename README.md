@@ -34,8 +34,11 @@ As well as the parameters above, you can optionally pass some of the user's pers
 + `county` (eg. Wiltshire)
 + `profession` (eg. Nurse)
 + `userid`
++ `incomingid`
 
 Passing us the **userid** from your database is a good idea as it allows us to record this in our database. If you then decide to move to one of our more complex APIs in future then this will be useful and will save people from linking their accounts again.
+
+Once the entry is saved by the user, we will pass back the **incomingid** just in case you want to use it to update something at your end. For example this could be posted back to your server to record that the user has transfered a specific entry to FourteenFish.
 
 ## article-callback.html
 

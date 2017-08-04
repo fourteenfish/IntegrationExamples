@@ -17,6 +17,7 @@ $(document).ready(function() {
         }
         else if (data.event == "saved") {
             $('div.pagecover, div.popover').remove();
+            console.log('Entry saved to FourteenFish.  Incoming ID: ' + data.incomingid + '  FourteenFish ID: ' + data.fishid);
         }
         else if (data.event == "refreshlist") {
             $('iframe.cpdlist').attr("src", $('iframe.cpdlist').attr("src"));
