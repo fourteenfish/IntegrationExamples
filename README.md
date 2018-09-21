@@ -27,7 +27,7 @@ The iframe widget uses **postMessage()** to enable it to communicate with the pa
 
 As well as the parameters above, you can optionally pass some of the user's personal details to make it quicker for them to create a FourteenFish account if they don't already have them. Of course this only works if you have user accounts on your website and the user is logged in.
 
-You can also pass a **minutes** parameter if you want to give the user a suggestion of how much CPD they should allocate to their entry.
+You can also pass a **minutes** parameter if you want to give the user a suggestion of how much CPD they should allocate to their entry. If not specified, this defaults to 30 minutes.
 
 + `minutes` (eg. 90 for 1h30m)
 + `email`
