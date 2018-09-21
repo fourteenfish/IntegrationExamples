@@ -21,12 +21,15 @@ This is the easiest option for you to implement. You put a button in any pages o
 
 You can use **demo** as the `integrationid` for testing, but before too long you should [contact us](https://www.fourteenfish.com/contact) and we will set you up with your own `integrationid`. At the same time we can do things like customise the text on the login widget for you as needed.
 
-The iframe widget uses **postMessage()** to enable it to communicate with the parent page. This includes sending its height, avoiding scrollbars on the iframe and improving usability and oerall appearance. The code for handling this is in all of the demo pages and is contained in the **scripts/message.js** file. You don't have to implement this, but we recommend it. The same script also handles closing the popover once the user has saved their CPD entry.
+The iframe widget uses **postMessage()** to enable it to communicate with the parent page. This includes sending its height, avoiding scrollbars on the iframe and improving usability and overall appearance. The code for handling this is in all of the demo pages and is contained in the **scripts/message.js** file. You don't have to implement this, but we recommend it. The same script also handles closing the popover once the user has saved their CPD entry.
 
 ### Optional parameters
 
 As well as the parameters above, you can optionally pass some of the user's personal details to make it quicker for them to create a FourteenFish account if they don't already have them. Of course this only works if you have user accounts on your website and the user is logged in.
 
+You can also pass a **minutes** parameter if you want to give the user a suggestion of how much CPD they should allocate to their entry.
+
++ `minutes` (eg. 90 for 1h30m)
 + `email`
 + `salutation` (eg. Mr, Mrs, Dr)
 + `firstname`
