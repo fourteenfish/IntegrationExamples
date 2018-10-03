@@ -27,8 +27,8 @@ The iframe widget uses **postMessage()** to enable it to communicate with the pa
 
 + `{ event: "height", iframeHeight: 414 }` – iframe content height has changed
 + `{ event: "account_created" }` – the user has made a new account
-+ `{ event: "account_loggedin" }` – the user logged into their existing account
 + `{ event: "empty_list" }` – the user is viewing an empty CPD list
++ `{ event: "normal_list" }` – the user is viewing thier CPD list which contains at least one entry
 
 ### Optional parameters
 
