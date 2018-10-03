@@ -21,7 +21,14 @@ This is the easiest option for you to implement. You put a button in any pages o
 
 You can use **demo** as the `integrationid` for testing, but before too long you should [contact us](https://www.fourteenfish.com/contact) and we will set you up with your own `integrationid`. At the same time we can do things like customise the text on the login widget for you as needed.
 
-The iframe widget uses **postMessage()** to enable it to communicate with the parent page. This includes sending its height, avoiding scrollbars on the iframe and improving usability and overall appearance. The code for handling this is in all of the demo pages and is contained in the **scripts/message.js** file. You don't have to implement this, but we recommend it. The same script also handles closing the popover once the user has saved their CPD entry.
+### postMessage() communication with the parent page
+
+The iframe widget uses **postMessage()** to enable it to communicate with the parent page. This includes sending its height, avoiding scrollbars on the iframe and improving usability and overall appearance. The code for handling this is in all of the demo pages and is contained in the **scripts/message.js** file. You don't have to implement this, but we recommend it. The same script also handles closing the popover once the user has saved their CPD entry. Examples of **postMessage()** communications include:
+
++ `{ event: "height", iframeHeight: 414 }` (iframe content height has changed)
++ `{ event: "account_created" }` (the user has made a new account)
++ `{ event: "account_loggedin" }` (the user logged into their existing account)
++ `{ event: "empty_list" }` (the user is viewing an empty CPD list)
 
 ### Optional parameters
 

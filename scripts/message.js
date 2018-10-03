@@ -11,6 +11,8 @@
 $(document).ready(function() {
     $(window).on("message", function(e) {
         var data = e.originalEvent.data;
+        console.log(data);
+        
         if (data.event == "height") {
             var height = data.iframeHeight;
             if ($('iframe').height() < height) $('iframe:eq(0)').height(height);
