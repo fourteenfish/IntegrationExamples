@@ -2,7 +2,7 @@
 
 This repository is intended to give you a great starting point for integrating with our iframe widget.
 
-**Want to jump straight to the action? [Go to the demo >](https://philwilks.github.io/FourteenFish-Integration/article-simple.html)**
+**Want to jump straight to the action? [Go to the demo >](https://fourteenfish.github.io/IntegrationExamples/article-simple.html)**
 
 To use the Learning Diary (the name for our CPD recorder) via the widget, the user needs a FourteenFish account. We try and make it nice and easy for them to create their account if they don't already have one.
 
@@ -10,7 +10,7 @@ To use the Learning Diary (the name for our CPD recorder) via the widget, the us
 
 ## article-simple.html
 
-[Go to the demo page >](https://philwilks.github.io/FourteenFish-Integration/article-simple.html)
+[Go to the demo page >](https://fourteenfish.github.io/IntegrationExamples/article-simple.html)
 
 This is the easiest option for you to implement. You put a button in any pages of your website that you want the user to be able to record CPD from. When the user clicks this button, you show an **iframe** with some special parameters:
 
@@ -52,7 +52,7 @@ Once the entry is saved by the user, we will pass back the **incomingid** just i
 
 ## article-callback.html
 
-[Go to the demo page >](https://philwilks.github.io/FourteenFish-Integration/article-callback.html)
+[Go to the demo page >](https://fourteenfish.github.io/IntegrationExamples/article-callback.html)
 
 If putting the user's personal details in the **iframe** src attribute feels messy but you still want to assist the user with account creation, you can just send us your `userid` and `usercallback` set to **true** and we will then use this to perform a serverside callback to get their details. 
 
@@ -62,7 +62,7 @@ Just to clarify, there is nothing wrong with putting the user's personal details
 
 ## list-simple.html
 
-[Go to the demo page >](https://philwilks.github.io/FourteenFish-Integration/list-simple.html)
+[Go to the demo page >](https://fourteenfish.github.io/IntegrationExamples/list-simple.html)
 
 This demo contains a single iframe for displaying a list of the user's CPD entries. The code in the **scripts/message.js** file ensures that the iframe is always tall enough to accomodate its content and avoids the iframe having scrollbars.
 
@@ -70,7 +70,7 @@ You could argue that it's strange to show a link to this page to the user before
 
 ## list-record.html
 
-[Go to the demo page >](https://philwilks.github.io/FourteenFish-Integration/list-record.html)
+[Go to the demo page >](https://fourteenfish.github.io/IntegrationExamples/list-record.html)
 
 This demo contains two iframes, one for listing existing entries and one for recording new entries which is triggered by the link on the right hand side of the page.
 
@@ -78,4 +78,4 @@ When the message **refreshlist** is received then the list of entries is reloade
 
 ## Other pages
 
-[Patient review >](https://philwilks.github.io/FourteenFish-Integration/patientreview.html)
+[Patient review >](https://fourteenfish.github.io/IntegrationExamples/patientreview.html)
