@@ -99,7 +99,7 @@ update the email details stored on our side which is then used to match the user
  
  The response will be empty with a status of OK (200).
  
- ##4) A delegate is changed entirely but the pre-course email with link has been sent
+ ## 4) A delegate is changed entirely but the pre-course email with link has been sent
  
  In this scenario we suggest an initial **DELETE** request using the original delegateId followed by a 
  new **POST** request with the brand new details which will return 2 new links.
