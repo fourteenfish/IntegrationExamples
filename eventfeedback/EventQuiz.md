@@ -14,7 +14,7 @@ normally updated for each tranche of GP Update courses.
 
 There are 4 circumstances that need to be considered by the API and these are detailed below.
 
-##1) A new booking onto a Red Whale event
+## 1) A new booking onto a Red Whale event
 
 This is done using a **POST** request using to following url:
 
@@ -70,7 +70,7 @@ An example response:
     }
 ```
 
-##2) An email change on an existing booking
+## 2) An email change on an existing booking
 
 This is communicated to us through a **PUT** request with further details below. We will 
 update the email details stored on our side which is then used to match the user to a potential
@@ -86,7 +86,7 @@ update the email details stored on our side which is then used to match the user
  
  The quiz links will not be returned as they haven't changed.
  
- ##3) A delegate cancels
+ ## 3) A delegate cancels
  
  This is communicated through a **DELETE** request.
  
