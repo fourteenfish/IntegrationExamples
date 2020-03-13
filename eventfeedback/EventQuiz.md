@@ -33,6 +33,7 @@ We will require the following fields supplied in the JSON format.
 - postCode - *the delegates Post code which Red Whale use to analyse the results*
 - job - *the job title for the delegate*
 - delegateType - *the type of delegate*
+- questionnaireId - *this is optional and if used will override the default questionnaireId*
 
 We believe that from previous imports from Red Whale job and delegate type are often the same.
 
